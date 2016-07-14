@@ -1,0 +1,10 @@
+rootProject.name = 'rpc-framework'
+include 'rpc-client'
+include 'rpc-common'
+include 'rpc-registry-zookeeper'
+include 'rpc-registry'
+include 'rpc-sample-api'
+include 'rpc-sample-client'
+include 'rpc-sample-server'
+include 'rpc-server'
+
