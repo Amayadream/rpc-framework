@@ -6,19 +6,18 @@ import com.amayadream.rpc.server.RpcService;
 
 /**
  * @author :  Amayadream
- * @date :  2016.07.14 22:09
+ * @date :  2016.07.18 23:10
  */
-@RpcService(HelloService.class)
-public class HelloServiceImpl implements HelloService {
-
+@RpcService(value = HelloService.class, version = "sample.hello2")
+public class HelloServiceImpl2 implements HelloService {
     @Override
     public String hello(String name) {
-        return "Hello! " + name;
+        return "你好! " + name;
     }
 
     @Override
     public String hello(Person person) {
-        return "Hello! " + person.getFirstName() + " " + person.getLastName();
+        return "你好! " + person.getFirstName() + " " + person.getLastName();
     }
 
 }

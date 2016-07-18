@@ -8,6 +8,9 @@ repositories {
 }
 
 dependencies {
+    //依赖模块
     compile project(':rpc-common')
     compile project(':rpc-registry-zookeeper')
+
+
 }
