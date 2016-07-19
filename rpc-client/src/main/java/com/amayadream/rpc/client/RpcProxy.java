@@ -19,7 +19,7 @@ import java.util.UUID;
  */
 public class RpcProxy {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(RpcProxy.class);
+    private static final Logger logger = LoggerFactory.getLogger(RpcProxy.class);
 
     private String serviceAddress;
 
@@ -62,7 +62,7 @@ public class RpcProxy {
                                 serviceName += "-" + serviceVersion;
                             }
                             serviceAddress = serviceDiscovery.discover(serviceName);
-                            LOGGER.debug("discover service: {} => {}", serviceName, serviceAddress);
+                            logger.debug("discover service: {} => {}", serviceName, serviceAddress);
                         }
                         if (StringUtil.isEmpty(serviceAddress)) {
                             throw new RuntimeException("server address is empty");
@@ -75,7 +75,7 @@ public class RpcProxy {
                         RpcClient client = new RpcClient(host, port);
                         long time = System.currentTimeMillis();
                         RpcResponse response = client.send(request);
-                        LOGGER.debug("time: {}ms", System.currentTimeMillis() - time);
+                        logger.debug("time: {}ms", System.currentTimeMillis() - time);
                         if (response == null) {
                             throw new RuntimeException("response is null");
                         }
@@ -89,6 +89,7 @@ public class RpcProxy {
                 }
         );
     }
+
 
 
 }
