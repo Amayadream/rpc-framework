@@ -10,6 +10,7 @@ repositories {
 dependencies {
     compile project(':rpc-sample-api')
     compile project(':rpc-client')
+    compile group: 'junit', name: 'junit', version: '4.11'
     compile group: 'org.springframework', name: 'spring-context', version: '4.3.1.RELEASE'
     compile group: 'org.springframework', name: 'spring-test', version: '4.3.1.RELEASE'
 }

@@ -10,4 +10,5 @@ repositories {
 dependencies {
     compile project(':rpc-sample-api')
     compile project(':rpc-server')
+    compile group: 'junit', name: 'junit', version: '4.11'
 }
